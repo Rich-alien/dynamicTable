@@ -1,0 +1,38 @@
+<div class="table-filter">
+  <button
+    class="table-filter__button"
+    (click)="changePopup()"
+  >
+    <i-tabler
+      class="icon"
+      name="filter"
+    ></i-tabler>
+  </button>
+  <div
+    *ngIf="isFilterOpen"
+    class="table-filter__container filter"
+  >
+    <div class="filter__header">
+      <h3>Фильтр</h3>
+      <button class="button" (click)="changePopup()">
+        <i-tabler
+          class="button__icon"
+          name="x"
+        ></i-tabler>
+      </button>
+    </div>
+    <div class="filter__body">
+      <form [formGroup]="form">
+        <app-input-range
+          *ngFor="let setting of settingForm"
+          [formGroup]="form"
+          [settings]="setting"
+        ></app-input-range>
+      </form>
+    </div>
+    <div class="filter__buttons">
+      <button class="filter__buttons-submit button" (click)="submit()">Подтвердить</button>
+      <button class="filter__buttons-reset button" (click)="reset()">Сбросить</button>
+    </div>
+  </div>
+</div>
