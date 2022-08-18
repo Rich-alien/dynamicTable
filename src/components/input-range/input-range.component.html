@@ -1,0 +1,13 @@
+<div class="input-range" [formGroup]="formGroup">
+  <span>{{settings.title}}</span>
+  <div class="input-range__input">
+    <input
+      id="volume"
+      [formControlName]="settings.controlName"
+      type="range"
+      name="volume"
+      [min]="settings.min"
+      [max]="settings.max">
+    <label for="volume">{{getValue()}}</label>
+  </div>
+</div>
