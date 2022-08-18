@@ -1,0 +1,13 @@
+<div class="drop-down">
+  <label for="drop-down">{{dropDownTitle}}</label>
+  <select
+    class="drop-down__select"
+    id="drop-down"
+    (change)="selectOption($event)">
+    <option
+      class="option"
+      *ngFor="let option of dropDownOptions"
+      [value]="option.value"
+    >{{option.title}}</option>
+  </select>
+</div>
