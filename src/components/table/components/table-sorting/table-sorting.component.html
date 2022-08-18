@@ -1,0 +1,12 @@
+<div class="sorting">
+  <button class="sorting__direction"
+          (click)="changeDirection()">
+    <i-tabler class="icon"
+              [class._rotate]="direction ==='desc'"
+              name="arrow-down"></i-tabler>
+  </button>
+  <app-drop-down
+    [dropDownOptions]="columns"
+    (handleSelectOption)="selectSortField($event)"
+  ></app-drop-down>
+</div>

@@ -1,0 +1,28 @@
+.sorting {
+  padding: 10px 20px;
+  background: white;
+  display: flex;
+  align-items: center;
+  border-radius: 8px;
+
+  &__direction {
+    padding: 0;
+    background: inherit;
+    display: flex;
+    justify-content: center;
+    border: none;
+    align-items: center;
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+
+    .icon {
+      transition: 1s;
+
+      &._rotate {
+        transition: 1s;
+        transform: rotate(180deg);
+      }
+    }
+  }
+}
